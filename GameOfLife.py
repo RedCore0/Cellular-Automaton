@@ -43,8 +43,10 @@ def LifeSimulation(BoardSize, Board):
             if LivingCells < 2 or LivingCells > 3:
                 ToUpdate[Board.index(r)][r.index(c)].alive = False
                 ToUpdate[Board.index(r)][r.index(c)].visual = " · "
+                ToUpdate[Board.index(r)][r.index(c)].Gvisual = "black"
             elif LivingCells == 3:
                 ToUpdate[Board.index(r)][r.index(c)].alive = True
                 ToUpdate[Board.index(r)][r.index(c)].visual = " ■ "
+                ToUpdate[Board.index(r)][r.index(c)].Gvisual = "white"
     Board = ToUpdate
     return Board
